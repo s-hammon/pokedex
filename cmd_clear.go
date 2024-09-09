@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-func cmdClear() error {
+func cmdClear(cfg *pokeConfig) error {
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()

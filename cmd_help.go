@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func cmdHelp() error {
+func cmdHelp(cfg *pokeConfig) error {
 	fmt.Printf(
 		"Welcome to %v! These are the available commands:\n\n",
 		proompt,
