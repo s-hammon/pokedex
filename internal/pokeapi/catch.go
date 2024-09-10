@@ -11,8 +11,8 @@ func (c *Client) TryCatchPokemon(name string) (string, error) {
 	}
 
 	if weightedRandomCatch(pokemon.BaseExperience) {
-		c.pokedex.Add(pokemon)
-		return pokemon.Name + " was caught!", nil
+		c.Pokedex.Add(pokemon)
+		return pokemon.Name + " was caught!\nYou may now inspect it with the inspect command.", nil
 	}
 
 	return pokemon.Name + " escaped!", nil
