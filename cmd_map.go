@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func cmdMap(cfg *pokeConfig) error {
+func cmdMap(cfg *pokeConfig, args ...string) error {
 	areas, err := cfg.pokeClient.GetLocations(cfg.nextURL)
 	if err != nil {
 		return err
@@ -19,7 +19,7 @@ func cmdMap(cfg *pokeConfig) error {
 	return nil
 }
 
-func cmdMapB(cfg *pokeConfig) error {
+func cmdMapB(cfg *pokeConfig, args ...string) error {
 	if cfg.prevURL == nil {
 		return fmt.Errorf("no previous page")
 	}
